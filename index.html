@@ -1,58 +1,67 @@
-<!DOCTYPE html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Adam Adham">
-    <meta name="description" content="A simple task management application">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Adam Adham" />
+    <meta name="description" content="A simple task management application" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Tasks</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" />
     <script src="script.js" defer></script>
+    <script src="practice.js" defer></script>
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <main class="app">
-        <h1>My Tasks</h1>
-        <p>Organize your day, one task at a time.</p>
-        <hr>
+      <h1>My Tasks</h1>
+      <p>Organize your day, one task at a time.</p>
+      <hr />
 
-        <h2>Add a new task</h2>
-        <form id="task-form">
-            <input type="text" id="taskName" name="taskName" placeholder="Enter a task name..." aria-label="Task name"
-                autocomplete="off" required autofocus>
-            <button type="submit" id="add-task-btn"> + Add Task</button>
-        </form>
+      <h2>Add a new task</h2>
+      <form id="task-form">
+        <input
+          type="text"
+          id="taskName"
+          name="taskName"
+          placeholder="Enter a task name..."
+          aria-label="Task name"
+          autocomplete="off"
+          required
+          autofocus
+        />
+        <button type="submit" id="add-task-btn">+ Add Task</button>
+      </form>
 
-        <hr>
+      <hr />
 
-        <section id="tasks-screen">
-            <div class="tasks-header">
-                <h3>Your Task</h3>
-                <span id="counter" aira-live="polite">
-                    0 tasks left
-                </span>
-            </div>
+      <section id="tasks-screen">
+        <div class="tasks-header">
+          <h3>Your Task</h3>
+          <span id="counter" aria-live="polite"> 0 tasks left </span>
+        </div>
 
-            <div class="filtering-buttons">
-                <button type="button" data-filter="all" aria-pressed="true">
-                    All
-                </button>
-                <button type="button" data-filter="active" aria-pressed="false">
-                    Active
-                </button>
-                <button type="button" data-filter="completed" aria-pressed="false">
-                    Completed
-                </button>
-            </div>
+        <div class="filtering-buttons">
+          <button type="button" data-filter="ALL" aria-pressed="true">
+            All
+          </button>
+          <button type="button" data-filter="ACTIVE" aria-pressed="false">
+            Active
+          </button>
+          <button type="button" data-filter="COMPLETED" aria-pressed="false">
+            Completed
+          </button>
+        </div>
 
-            <ul id="task-list"></ul>
-
-        </section>
+        <ul id="task-list"></ul>
+      </section>
     </main>
 
-</body>
-
-
+    <template id="task-template">
+      <li class="task-item">
+        <input type="checkbox" class="task-checkbox" />
+        <span class="task-title"></span>
+        <button type="button" class="delete-btn">Delete</button>
+      </li>
+    </template>
+  </body>
 </html>

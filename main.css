@@ -267,11 +267,11 @@ button:focus-visible {
     font-size: 24px;
   }
 
-  .filters {
+  .filtering-buttons {
     gap: 6px;
   }
 
-  .filters button {
+  .filtering-buttons button {
     padding: 10px 4px;
     font-size: 13px;
   }
